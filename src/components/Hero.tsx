@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Hero = () => {
     return (
       <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}>
@@ -11,12 +13,12 @@ const Hero = () => {
             Make the most out of Fashion.
           </p>
           <div className="flex items-center text-gray-900 space-x-2 text-base md:text-lg">
-            <a href="#learn-more" className="flex items-center">
+            <Link href="/Shop" className="flex items-center">
               <span>Shop now</span>
               <svg className="w-4 h-4 md:w-6 md:h-6 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
