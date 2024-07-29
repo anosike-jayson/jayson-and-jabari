@@ -14,7 +14,8 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY < lastScrollY) {
+      // Show the navbar when scrolling up, and keep it visible at the top of the page
+      if (window.scrollY < 10 || window.scrollY < lastScrollY) {
         setShowNavBar(true);
       } else {
         setShowNavBar(false);
@@ -53,7 +54,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 backdrop-blur-sm bg-transparent py-5 px-2 md:px-20 shadow-lg border-b border-transparent transition-transform duration-300 ${showNavBar ? 'translate-y-0' : '-translate-y-full'}`}
+      className={`fixed top-0 left-0 w-full z-50 backdrop-blur-sm py-5 px-2 md:px-20 shadow-lg transition-transform duration-300 ${showNavBar ? 'translate-y-0' : '-translate-y-full'}`}
     >
       <div className="flex justify-between items-center">
         <div className="logo">
@@ -66,14 +67,14 @@ const NavBar = () => {
         >
           {isNavOpen ? <FaTimes /> : <FaBars />}
         </button>
-        <div className={`nav-links flex-1 flex justify-center space-x-8 md:flex ${isNavOpen ? 'block' : 'hidden'} md:block`}>
-          <Link href="/" className="text-black text-l hover:text-green-700">HOME</Link>
-          <Link href="#about" className="text-black text-l hover:text-green-700">ABOUT</Link>
-          <Link href="/Shop" className="text-black text-l hover:text-green-700">SHOP</Link>
+        <div className={`nav-links flex-1 flex justify-center space-x-8 md:flex ${isNavOpen ? 'flex' : 'hidden'} md:block`}>
+          <Link href="/" className="text-black text-lg hover:text-green-700">HOME</Link>
+          <Link href="#about" className="text-black text-lg hover:text-green-700">ABOUT</Link>
+          <Link href="/Shop" className="text-black text-lg hover:text-green-700">SHOP</Link>
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={handleDropdownToggle}
-              className="text-black text-l flex items-center hover:text-green-700"
+              className="text-black text-lg flex items-center hover:text-green-700"
               aria-haspopup="true"
               aria-expanded={isDropdownOpen}
             >
