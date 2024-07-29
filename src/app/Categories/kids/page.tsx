@@ -12,14 +12,14 @@ type Product = {
 
 const KidsCategoryPage: React.FC = () => {
   const products: Product[] = [
-    { id: 1, name: 'Product 1', description: 'Description 1', price: 100, image: '/images/green-shoe.jpg' },
-    { id: 2, name: 'Product 2', description: 'Description 2', price: 200, image: '/images/green-shoe.jpg' },
-    { id: 2, name: 'Product 2', description: 'Description 2', price: 200, image: '/images/green-shoe.jpg' },
-    { id: 2, name: 'Product 2', description: 'Description 2', price: 200, image: '/images/green-shoe.jpg' },
-    { id: 2, name: 'Product 2', description: 'Description 2', price: 200, image: '/images/green-shoe.jpg' },
-    { id: 2, name: 'Product 2', description: 'Description 2', price: 200, image: '/images/green-shoe.jpg' },
-    { id: 2, name: 'Product 2', description: 'Description 2', price: 200, image: '/images/green-shoe.jpg' },
-    { id: 2, name: 'Product 2', description: 'Description 2', price: 200, image: '/images/green-shoe.jpg' },
+    { id: 1, name: 'Product 1', description: 'Description 1', price: 100, image: '/images/high-tops.jpg' },
+    { id: 2, name: 'Product 2', description: 'Description 2', price: 200, image: '/images/high-tops.jpg' },
+    { id: 2, name: 'Product 2', description: 'Description 2', price: 200, image: '/images/high-tops.jpg' },
+    { id: 2, name: 'Product 2', description: 'Description 2', price: 200, image: '/images/high-tops.jpg' },
+    { id: 2, name: 'Product 2', description: 'Description 2', price: 200, image: '/images/high-tops.jpg' },
+    { id: 2, name: 'Product 2', description: 'Description 2', price: 200, image: '/images/high-tops.jpg' },
+    { id: 2, name: 'Product 2', description: 'Description 2', price: 200, image: '/images/high-tops.jpg' },
+    { id: 2, name: 'Product 2', description: 'Description 2', price: 200, image: '/images/high-tops.jpg' },
   ];
 
   return (

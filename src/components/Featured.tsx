@@ -15,7 +15,7 @@ const Featured = () => {
         originalPrice: "$56.25",
         discountedPrice: "$48.50",
         discount: "-14%",
-        imageUrl: "/images/girl-vans.jpg",
+        imageUrl: "/images/high-tops.jpg",
       },
       {
         id: 3,
