@@ -11,14 +11,14 @@ const deals = [
 
 const Sidebar = () => {
   return (
-    <aside className="w-64 p-4 bg-gray-100">
+    <aside className="w-full md:w-64 p-4 bg-gray-100">
       <div>
         <h2 className="text-xl font-bold">Hottest Deals</h2>
         <ul className="mt-2 space-y-4">
           {deals.map(deal => (
-            <li key={deal.id} className="bg-white border border-gray-200 rounded-lg">
+            <li key={deal.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden">
               <Link href={deal.link} className="block">
-                <img src={deal.image} alt={deal.title} className="w-full h-40 object-cover" />
+                <img src={deal.image} alt={deal.title} className="w-full h-32 sm:h-40 object-cover" />
                 <div className="p-4">
                   <h3 className="text-lg font-semibold text-gray-900">{deal.title}</h3>
                 </div>

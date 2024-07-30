@@ -11,9 +11,9 @@ type Product = {
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
-    <div className="relative bg-white shadow-md rounded-md overflow-hidden">
+    <div className="relative bg-white shadow-md rounded-md overflow-hidden h-50">
       {/* Container for the image */}
-      <div className="w-full h-64 relative">
+      <div className="w-full h-54 relative">
         <img 
           src={product.image} 
           alt={product.name} 

@@ -1,8 +1,8 @@
-"use client"; // Add this directive at the top
+"use client";
 
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from '../../public/images/logo.png'
+import Logo from '../../public/images/logo.png';
 import React, { useState, useEffect, useRef } from 'react';
 import { FaBars, FaTimes, FaShoppingCart, FaUser, FaChevronDown } from 'react-icons/fa';
 
@@ -59,9 +59,15 @@ const NavBar = () => {
       className={`fixed top-0 left-0 w-full z-50 backdrop-blur-sm py-5 px-2 md:px-20 shadow-lg transition-transform duration-300 ${showNavBar ? 'translate-y-0' : '-translate-y-full'}`}
     >
       <div className="flex justify-between items-center">
-      <div className="logo">
+        <div className="logo">
           <Link href="/">
-            <Image src={Logo} alt="Jayson & Jabari Logo" width={150} height={50} /> {/* Increased size */}
+            <Image
+              src={Logo}
+              alt="Jayson & Jabari Logo"
+              width={200}
+              height={40}
+              className="object-contain" // Ensures the image maintains its aspect ratio
+            />
           </Link>
         </div>
         <button
