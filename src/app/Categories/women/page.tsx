@@ -24,11 +24,11 @@ const WomenCategoryPage: React.FC = () => {
   ];
 
   return (
-    <div className="flex pt-20">
+    <div className="flex flex-col md:flex-row pt-20">
       <Sidebar />
       <main className="flex-1 p-8">
         <h1 className="text-5xl font-bold mb-8">Deals For Women</h1>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

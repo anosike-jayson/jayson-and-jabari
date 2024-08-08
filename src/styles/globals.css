@@ -21,3 +21,38 @@ a {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;  /* Safari and Chrome */
 }
+
+/* For large screens */
+@media (min-width: 768px) {
+  .carousel-container {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .carousel-item {
+    width: 25%; /* Adjust for large screens */
+  }
+
+  .carousel-controls {
+    display: flex; /* Show controls */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 767px) {
+  .carousel-container {
+    display: block;
+    overflow-x: scroll; /* Allow horizontal scroll on mobile */
+    scroll-snap-type: x mandatory; /* Snap to items */
+  }
+
+  .carousel-item {
+    width: 100%; /* Full width on mobile */
+    scroll-snap-align: start; /* Snap alignment */
+  }
+
+  .carousel-controls {
+    display: none; /* Hide controls on mobile */
+  }
+}
+
